@@ -1,6 +1,6 @@
 # aws-iam-policies
 
-```
+```yaml
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
