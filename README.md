@@ -1,6 +1,7 @@
 # aws-iam-policies
 
 ```yaml
+cat <<EOF | kubectl apply -f -
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
@@ -11,4 +12,6 @@ spec:
   url: https://github.com/tf-controller/aws-iam-policies
   ref:
     branch: main
+EOF
+
 ```
