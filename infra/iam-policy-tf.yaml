@@ -8,6 +8,9 @@ spec:
   path: ./policies
   approvalPlan: "auto"
   interval: 30s
+  varsFrom:
+    kind: Secret
+    name: aws-credentials
   sourceRef:
     kind: GitRepository
     name: aws-iam-policies
