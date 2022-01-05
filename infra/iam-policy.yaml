@@ -1,0 +1,14 @@
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: iam-policy
+  namespace: flux-system
+spec:
+  path: ./policies
+  approvalPlan: "auto"
+  interval: 30s
+  sourceRef:
+    kind: GitRepository
+    name: aws-iam-policies
+    namespace: flux-system
