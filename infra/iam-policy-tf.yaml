@@ -8,6 +8,9 @@ spec:
   path: ./policies
   approvePlan: "auto"
   interval: 30s
+  vars:
+  - name: cluster_name
+    value: karpenter
   varsFrom:
     kind: Secret
     name: aws-credentials
