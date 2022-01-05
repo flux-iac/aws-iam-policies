@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   path: ./policies
-  approvalPlan: "auto"
+  approvePlan: "auto"
   interval: 30s
   varsFrom:
     kind: Secret
