@@ -13,9 +13,29 @@ provider "aws" {
   secret_key = var.secret_key
 }
 
+resource "aws_iam_role" "karpenter_controller_role" {
+
+  name = "karpenter_controller_role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Sid    = ""
+        Principal = {
+          Service = "ec2.amazonaws.com"
+        }
+      },
+    ]
+  })
+
+}
+
 resource "aws_iam_role_policy" "karpenter_controller" {
   name = "karpenter-policy-${var.cluster_name}"
-  // role = module.iam_assumable_role_karpenter.iam_role_name
+  role = aws_iam_role.karpenter_controller_role.id
 
   policy = jsonencode({
     Version = "2012-10-17"
