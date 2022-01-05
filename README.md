@@ -20,7 +20,8 @@ metadata:
   name: aws-iam-policies-ks
   namespace: flux-system
 spec:
-  interval: 5m
+  prune: true
+  interval: 1m
   path: "./infra"
   sourceRef:
     kind: GitRepository
