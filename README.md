@@ -1,4 +1,4 @@
-# AWS IAM Policies for TF controller
+# An AWS IAM Policy Example for TF controller
 
 Before using it, you need a Secret name `aws-credentials` to hold your Access and Secret keys.
 
