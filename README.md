@@ -36,13 +36,13 @@ metadata:
   namespace: flux-system
 spec:
   prune: true
-  interval: 1m
+  interval: 2m
   path: "./infra"
   sourceRef:
     kind: GitRepository
     name: aws-iam-policies
   wait: true
-  timeout: 2m
+  timeout: 3m
 EOF
 
 ```
