@@ -41,7 +41,10 @@ spec:
   sourceRef:
     kind: GitRepository
     name: aws-iam-policies
-  wait: true
+  healthChecks:
+  - apiVersion: infra.contrib.fluxcd.io/v1alpha1
+    kind: Terraform
+    name: iam-policy
   timeout: 3m
 EOF
 
