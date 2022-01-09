@@ -7,7 +7,7 @@ metadata:
 spec:
   path: ./policies
   approvePlan: "auto"
-  interval: 3m
+  interval: 10m
   vars:
   - name: cluster_name
     value: karpenter
