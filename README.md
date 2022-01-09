@@ -41,11 +41,12 @@ spec:
   sourceRef:
     kind: GitRepository
     name: aws-iam-policies
+  timeout: 3m
   healthChecks:
   - apiVersion: infra.contrib.fluxcd.io/v1alpha1
     kind: Terraform
     name: iam-policy
-  timeout: 3m
+    namespace: flux-system
 EOF
 
 ```
