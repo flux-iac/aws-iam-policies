@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   path: ./policies
-  approvePlan: "plan-main-f305bbfb5cd"
+  approvePlan: "plan-main-07500065aa"
   interval: 5m
   vars:
   - name: cluster_name
