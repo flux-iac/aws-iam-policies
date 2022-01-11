@@ -13,7 +13,7 @@ data:
   secret_key: <redacted>
 ```
 
-Here's a copy-n-paste to bootstrap snippet for a Flux-ready system.
+Here's a copy-n-paste snippet to bootstrap the Terraform object for a Flux-ready system.
 
 ```yaml
 cat <<EOF | kubectl apply -f -
