@@ -54,6 +54,7 @@ resource "aws_iam_role_policy" "karpenter_controller" {
           "ec2:DescribeSubnets",
           "ec2:DescribeInstanceTypes",
           "ec2:DescribeInstanceTypeOfferings",
+          "ec2:DescribeAvailabilityZones",
           "ssm:GetParameter"
         ]
         Effect   = "Allow"
