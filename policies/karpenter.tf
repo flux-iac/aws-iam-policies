@@ -46,7 +46,6 @@ resource "aws_iam_role_policy" "karpenter_controller" {
           "ec2:CreateFleet",
           "ec2:RunInstances",
           "ec2:CreateTags",
-          "ec2:TerminateInstances",
           "ec2:DescribeLaunchTemplates",
           "ec2:DescribeInstances",
           "ec2:DescribeSecurityGroups",
